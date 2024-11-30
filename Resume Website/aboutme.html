@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0e4d7; 
+            color: black;
+            line-height: 1.6;
+        }
+
+      
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #6a0dad; 
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .dropdown {
+            position: absolute;
+            left: 20px;
+        }
+
+        .dropdown button {
+            background: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown button:hover {
+            background: lavender;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: lightgray;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        
+        .header-center {
+            text-align: center;
+            width: 100%;
+        }
+
+        .header-center h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: #ff9e80; 
+            animation: bounce 2s ease infinite;
+        }
+
+        .header-center h2 {
+            font-size: 1.2rem;
+            margin: 10px 0 0 0;
+            color: #ffe4e1; 
+        }
+
+        #clock {
+            display: inline-block;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            background: white; 
+            color: #6a0dad; 
+            border: 2px solid gold;
+            padding: 5px 10px;
+            border-radius: 10px;
+            white-space: nowrap;
+            position: absolute;
+            right: 20px;
+        }
+
+       
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+    
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        
+        .profile-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-content h2 {
+            color: #6a0dad;
+        }
+
+        .profile-content p {
+            font-size: 1.2rem;
+        }
+
+        
+        .profile-box {
+            background-color: #f4f4f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .profile-box h3 {
+            color: #6a0dad;
+            margin-top: 0;
+        }
+
+        .profile-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .profile-box ul li {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .profile-box ul li::before {
+            content: "• ";
+            color: #6a0dad;
+        }
+
+
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6a0dad;
+            color: white;
+        }
+
+
+        footer {
+            background: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: #ff9e80; 
+
+       
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+<header>
+    
+    <div class="dropdown">
+        <button>☰ Menu</button>
+        <div class="dropdown-content">
+            <a href="myworld.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="workexperience.html">Work Experience</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    
+    <div class="header-center">
+        <h1>My Profile</h1>
+        <h2>Welcome to my profile! Learn more about me.</h2>
+    </div>
+
+    
+    <div id="clock"></div>
+</header>
+
+<main>
+    <!-- Profile Section -->
+    <div class="profile-content">
+        <h2>My Profile</h2>
+        <p>Hello!! My name is Siti Aisha binti Mohd Faisal, and I am 20 years old. I am currently pursuing my studies at Universiti Teknologi Mara (UiTM), where I am enrolled in the Faculty of Information Management.</p>
+
+        <div>
+            <img src="hi.png" alt="Profile Picture" class="profile-img">
+        </div>
+
+        <!-- Interests & Hobbies Box -->
+        <div class="profile-box">
+            <h3>Interests & Hobbies</h3>
+            <ul>
+                <li>Playing games</li>
+                <li>Listening to music</li>
+                <li>Reading books</li>
+                <li>Watching movies</li>
+            </ul>
+        </div>
+
+        <!-- Favorite Food Box -->
+        <div class="profile-box">
+            <h3>Favorite Food</h3>
+            <ul>
+                <li>Nasi lemak</li>
+                <li>Roti john</li>
+                <li>Pizza</li>
+                <li>Sushi</li>
+                <li>Ice cream (especially chocolate flavor!)</li>
+            </ul>
+        </div>
+
+        <!-- Favorite Drinks Box -->
+        <div class="profile-box">
+            <h3>Favorite Drinks</h3>
+            <ul>
+                <li>Teh tarik</li>
+                <li>Fruit juices (especially orange)</li>
+                <li>Bubble tea</li>
+                <li>Cold coffee</li>
+            </ul>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    
+</footer>
+
+<script>
+    // Function to update the date and time
+    function updateClock() {
+        const now = new Date();
+
+        // Time
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+        // Date
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+
+        // Combine time and date
+        const time = `${hours}:${minutes}:${seconds}`;
+        const date = `${day}/${month}/${year}`;
+        
+        // Display on the #clock element
+        document.getElementById('clock').textContent = `${date} - ${time}`;
+    }
+
+    // Update time and date every second
+    setInterval(updateClock, 1000);
+    updateClock(); // Call once when the page loads
+</script>
+</body>
+</html>
+

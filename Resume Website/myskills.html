@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0e4d7;
+            color: #2e2e2e;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #6a0dad;
+            color: white;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        #clock {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: bold;
+            background: white;
+            color: #6a0dad;
+            border: 2px solid gold;
+            padding: 5px 10px;
+            border-radius: 10px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .dropdown {
+            margin-right: auto;
+            padding-left: 10px;
+        }
+
+        .dropdown button {
+            background: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown button:hover {
+            background: lavender;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: lightgray;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .header-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            height: 100%;
+            text-align: center;
+        }
+
+       
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .header-center h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+            padding: 10px 20px;
+            color: #ff9e80;
+            background: #6a0dad;
+            margin-left: -70px; 
+            border-radius: 0px;
+            animation: bounce 2s ease infinite; /* Animation applied here */
+        }
+
+        .header-center h2 {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: -70px; 
+            color: #ffe4e1;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #6a0dad;
+        }
+
+        footer {
+            background: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+            color: #ff9e80;
+        }
+
+        .skills-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .skills-table th, .skills-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .skills-table th {
+            background-color: #6a0dad;
+            color: white;
+        }
+
+        .skills-table td {
+            background-color: white;
+        }
+
+        .stars {
+            color: gold;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="dropdown">
+        <button>☰ Menu</button>
+        <div class="dropdown-content">
+            <a href="myworld.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="workexperience.html">Work Experience</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="header-center">
+        <h1>Skills</h1>
+        <h2>Here’s What I’m Good At!</h2>
+    </div>
+
+    <div id="clock"></div>
+</header>
+
+<main>
+    <h3>My Skills</h3>
+
+    <table class="skills-table">
+        <thead>
+            <tr>
+                <th>Skill</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Microsoft Word</td>
+                <td><span class="stars">★★★★★</span></td>
+            </tr>
+            <tr>
+                <td>Microsoft PowerPoint</td>
+                <td><span class="stars">★★★★☆</span></td>
+            </tr>
+            <tr>
+                <td>Microsoft Excel</td>
+                <td><span class="stars">★★★☆☆</span></td>
+            </tr>
+            <tr>
+                <td>Canva</td>
+                <td><span class="stars">★★★★☆</span></td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<footer> &copy; 2024 Aisha. All Rights Reserved.</footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+
+        const time = `${hours}:${minutes}:${seconds}`;
+        const date = `${day}/${month}/${year}`;
+
+        document.getElementById('clock').textContent = `${date} - ${time}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
+
+
+

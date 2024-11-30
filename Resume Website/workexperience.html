@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience</title>
+    <style>
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0e4d7; 
+            line-height: 1.6;
+        }
+
+       
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #6a0dad; 
+            color: white;
+            padding: 20px 30px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown {
+            position: absolute;
+            left: 20px;
+
+        }
+
+        .dropdown button {
+            background: #6a0dad; 
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown button:hover {
+            background: lavender;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 20;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: lightgray;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Centered Header Text */
+        .header-center {
+            text-align: center;
+            width: 100%;
+        }
+
+        .header-center h1 {
+            font-size: 2rem;
+            margin: 10px;
+            margin-left: 10px; 
+            color: #ff9e80; 
+            animation: bounce 2s ease infinite;
+        }
+        .header-center h2 {
+           font-size: 1.2rem; 
+           margin: 10px 0 0 10px; 
+           margin-left: 10px; 
+           color: #ffe4e1; 
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+} 
+        #clock {
+            display: inline-block;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            background: white; 
+            color: #6a0dad; 
+            border: 2px solid gold; 
+            padding: 5px 10px;
+            border-radius: 10px;
+            white-space: nowrap;
+            position: absolute;
+            right: 20px;
+        }
+
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+       
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+      
+        .work-experience {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .work-experience:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .work-experience h2 {
+            color: #6a0dad;
+            font-size: 1.5rem;
+        }
+
+        .work-experience ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .work-experience li {
+            background: #f4f4f9;
+            margin-bottom: 12px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .work-experience li:hover {
+            background-color: lightgray;
+        }
+
+      
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 12px;
+            padding: 12px 25px;
+            background: #444;
+            color: #fff;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #3498db;
+        }
+
+        footer {
+            background: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+
+       
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .company-images {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .company-image img {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .company-image img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+  
+
+<header>
+    
+    <div class="dropdown">
+        <button>☰ Menu</button>
+        <div class="dropdown-content">
+            <a href="myworld.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="education.html">Education</a>
+            <a href="myskills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+    </div>
+
+   
+    <div class="header-center">
+        <h1>Work Experience</h1>
+        <h2>Here’s a summary of my work history</h2>
+    </div>
+
+
+    <div id="clock"></div>
+</header>
+
+<main>
+    
+    <div class="work-experience">
+        <div class="company-images">
+           
+            <div class="company-image">
+                <img src="utem.png" alt="UTeM">
+            </div>
+
+           
+            <div class="company-image">
+                <img src="canselor.jpg" alt="UTeM Building">
+            </div>      
+        </div>
+          <h2> Work Experience</h2>
+        <ul>
+            <li>
+                <strong>Job Title:</strong> Internship in International Student & Mobility <br>
+                <strong>Company:</strong> Universiti Teknikal Malaysia Melaka (UTeM)<br>
+                <strong>Year:</strong> 2024<br>
+                <strong>Responsibilities:</strong>
+                <ol>
+                    <li>Created engaging slide presentations to promote UTeM’s programs and opportunities to international students.</li>
+                    <li>Provided assistance to staff in resolving student passport issues and ensuring smooth documentation processes.</li>
+                    <li>Participated in a photoshoot to produce high-quality images for UTeM's promotional brochures.</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+  &copy; 2024 Aisha. All Rights Reserved. 
+</footer>
+
+<script>
+   
+    function updateClock() {
+        const now = new Date();
+
+       
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+       
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // Bulan bermula dari 0
+        const year = now.getFullYear();
+
+        
+        const time = `${hours}:${minutes}:${seconds}`;
+        const date = `${day}/${month}/${year}`;
+        
+
+        document.getElementById('clock').textContent = `${date} - ${time}`;
+    }
+
+    
+    setInterval(updateClock, 1000);
+    updateClock(); 
+</script>
+
+</body>
+</html>
+
